@@ -12,7 +12,7 @@ access_token_secret = "YOUR_OWN_KEY"
 # Define the API endpoints and headers for Quote data
 quote_url = "https://twelve-data1.p.rapidapi.com/quote"
 quote_headers = {
-    "X-RapidAPI-Key": "9fb6f526damsh553ade645d8306bp1f207ajsnd8d72d6fe3d1",
+    "X-RapidAPI-Key": "YOUR_OWN_KEY",
     "X-RapidAPI-Host": "twelve-data1.p.rapidapi.com"
 }
 
