@@ -4,15 +4,15 @@ import schedule
 import time
 from datetime import datetime, time as dt_time
 
-consumer_key = "YVADXLeSl8EKAXI9ftNHhe5Iq"
-consumer_secret = "zKORM4KjoOTMp8LAA7C2gdbQXOVYSSkt24N8ij4vDnlwJW1thD"
-access_token = "1255508939992633347-Ppb8aODuTnYvGMykUIsgXXqsE4aTwj"
-access_token_secret = "ZGhIwtLhpuy9YNPQDoY9e9kIhvGjOBMIouqyEIWTdxiVF"
+consumer_key = "YOUR_OWN_KEY"
+consumer_secret = "YOUR_OWN_KEY"
+access_token = "YOUR_OWN_KEY"
+access_token_secret = "YOUR_OWN_KEY"
 
 # Define the API endpoints and headers for SMA data
 sma_url = "https://twelve-data1.p.rapidapi.com/sma"
 sma_headers = {
-    "X-RapidAPI-Key": "9fb6f526damsh553ade645d8306bp1f207ajsnd8d72d6fe3d1",
+    "X-RapidAPI-Key": "YOUR_OWN_KEY",
     "X-RapidAPI-Host": "twelve-data1.p.rapidapi.com"
 }
 
