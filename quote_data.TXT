@@ -1,0 +1,6 @@
+$SPY Quote for 2023-10-06: 
+Open: 421.98999
+High: 422.92001
+Low: 421.92001
+Close: 422.70599
+#spy, #stocks, #technicalindicator, #gcgdwatcher
