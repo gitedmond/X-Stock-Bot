@@ -7,7 +7,7 @@ The X Stock Bot, also known as the GC/GD Watcher, is a Python-based bot that mon
 
 ## Features
 - Monitors stock market trends for the specified stock symbol (e.g., SPY).
-- Alerts and identifies Golden Cross and Golden Death Cross events by calculating intersections via sign change of two most recently appended elements in an array `diff` 
+- Alerts and identifies Golden Cross and Death Cross events by calculating intersections via sign change of two most recently appended elements in an array `diff` 
 - Tweets real-time updates to an X account.
 
 ## Prerequisites
