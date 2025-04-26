@@ -1,4 +1,4 @@
-# Twitter Stock Bot (GC/GD Watcher)
+# X (Formerly Twitter) Stock Bot (GC/GD Watcher)
 
 
 
