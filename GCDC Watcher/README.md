@@ -37,3 +37,19 @@ Configuration like symbol, market hours, and intervals live in `config.py`.
 - HTTP requests use timeouts and raise on non-2xx; logs will reflect failures.
 - Market hours are evaluated in `America/New_York` timezone and only on weekdays.
 
+## How Alerts Work
+
+- Data fetch:
+  - The bot requests SMA(50) and SMA(200) values for the configured `SYMBOL` from the stock data API at a fixed interval (`SMA_CHECK_INTERVAL` minutes).
+- Difference tracking:
+  - It computes `diff = SMA50 - SMA200` and appends it to an in-memory list of recent differences.
+- Crossover detection:
+  - When at least two differences exist, a sign change between the last two values signals an intersection (crossover).
+  - Negative → non-negative: Golden Cross (bullish) alert.
+  - Positive → non-positive: Death Cross (bearish) alert.
+- Market-time guardrails:
+  - Checks only run and trigger during market hours on weekdays, evaluated in `America/New_York` timezone.
+- Notifications:
+  - On detection, the bot logs the event and posts a tweet via Twitter API v2. Failures are logged; the bot continues running.
+
+Note: The list of differences is kept in memory only; restarting the bot resets this history and may affect whether an immediate alert fires after a restart.
