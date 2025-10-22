@@ -1,20 +1,10 @@
-from requests_oauthlib import OAuth1
+from typing import Optional
 
 class TwitterAuth:
-    """Handles authentication for Twitter API"""
-    
-    def __init__(self, consumer_key, consumer_secret, access_token, access_token_secret):
-        """Initialize with Twitter API credentials"""
-        self.consumer_key = consumer_key
-        self.consumer_secret = consumer_secret
-        self.access_token = access_token
-        self.access_token_secret = access_token_secret
-        
-    def get_auth(self):
-        """Return OAuth1 authentication object for Twitter API requests"""
-        return OAuth1(
-            self.consumer_key, 
-            self.consumer_secret, 
-            self.access_token, 
-            self.access_token_secret
-        )
+    """Holds Twitter API v2 Bearer token for requests"""
+
+    def __init__(self, bearer_token: Optional[str] = None):
+        self.bearer_token = bearer_token
+
+    def get_bearer_token(self) -> Optional[str]:
+        return self.bearer_token
